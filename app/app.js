@@ -11,4 +11,6 @@ const App = Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+console.log(`current app git version is ${config.currentRevision}`)
+
 export default App;
