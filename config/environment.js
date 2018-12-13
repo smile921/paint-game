@@ -31,6 +31,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
+  ENV.noScript =  {
+    'content': "<p>" +
+      "For full functionality of this site it is necessary to enable JavaScript." +
+      "Here are the <a href='https://www.enable-javascript.com/' target='_blank'>" +
+      "instructions on how to enable JavaScript in your web browser</a>." +
+    "</p>"
+  }
+
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
