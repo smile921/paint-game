@@ -18,3 +18,15 @@
 {{/new-version-notifier}}
 ```
 * **one more thing this addon need jquery dependency**
+
+## ember-git-version
+Once installed you now have access to the current git revision through a new config property config.currentRevision.
+
+To access the new property, import the config whenever needed.
+```js
+import config from '../config/environment';
+
+...
+	console.log(config.currentRevision);
+...
+```
