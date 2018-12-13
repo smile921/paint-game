@@ -10,7 +10,7 @@ const App = Application.extend({
 });
 
 loadInitializers(App, config.modulePrefix);
-
-console.log(`current app git version is ${config.currentRevision}`)
+/* eslint no-console: 0 */
+console.log(`current app git version is ${config.currentRevision}`) 
 
 export default App;
