@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
 
 export default DS.Model.extend({
   cells: DS.hasMany('cell',{ async: false }),
@@ -15,8 +16,8 @@ export default DS.Model.extend({
   clear(){
 
   },
-  // serialized:
-  asJson(){
-    
-  }
+  serialized: computed.mapBy('cells','color'),
+  asJson: computed('serialized.[]',function(){
+    return JSON.stringify(this.serialized,null,2)
+  })
 });

@@ -1,2 +1,11 @@
 @import 'tailwind.css';
 
+/* table.picture {
+    display: grid;
+} */
+
+table.picture td:after {
+    content: '';
+    margin-top: 100%;
+    display: block;
+}
