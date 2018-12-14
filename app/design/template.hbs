@@ -1,1 +1,15 @@
-{{outlet}}
+<div class="flex h-screen">
+    <div class="flex-1 bg-gray-light">
+        <PictureGrid 
+          @picture={{model}} 
+          @color={{color}}
+          @isEditable={{true}}
+          @onChange={{action 'changeCellColor'}}
+        />
+        <hr>
+        <ColorPicker @color={{color}} @onChange={{action (mut color)}} />
+    </div>
+    <div class="flex-1">
+        jsontext: {{model.asJson}}
+    </div>
+</div>
