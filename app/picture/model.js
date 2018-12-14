@@ -12,9 +12,10 @@ export default DS.Model.extend({
   },
   load(template){
     for(let i=0;i<template.leagth;i++){
-      let cell = this.cells.atObject(i);
+      let cell = this.cells.objectAt(i);
       cell.set('color',template[i]);
-    }
+    }    
+    debugger
   },
   clear(){
     this.cells.setEach('color','white');

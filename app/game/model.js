@@ -18,6 +18,7 @@ export default DS.Model.extend({
         this.pickRandomTemplate();
     },
     pickRandomTemplate(){
+        // debugger
         let picked = templates[Math.floor(Math.random() * templates.length)];
         this.templatePicture.load(picked);
         this.gamePicture.clear();

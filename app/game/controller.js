@@ -11,7 +11,7 @@ export default Controller.extend({
             cell.set('color',this.color);
         },
         newGame(){
-
+            this.game.pickRandomTemplate();
         }
     }
 });
