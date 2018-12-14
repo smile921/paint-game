@@ -5,7 +5,11 @@
   {{#each (chunk 10 @picture.cells) as |row|}}
     <tr>
       {{#each row as |cell|}}
-        <td class="border border-gray-darkest cell w-1/10 {{concat 'bg-' cell.color }}">
+        <td 
+          class="border border-gray-darkest cell w-1/10 {{concat 'bg-' cell.color }}"
+          onclick={{action 'updateCellColor' cell}}
+          onmousemove={{action 'mousemove' cell}}
+        >
           
         </td>
       {{/each}}

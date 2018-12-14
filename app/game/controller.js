@@ -5,5 +5,13 @@ export default Controller.extend({
     init(){
         this._super(...arguments)
         this.set('game',this.store.createRecord('game'))
+    },
+    actions: {
+        changeColor(cell){
+            cell.set('color',this.color);
+        },
+        newGame(){
+
+        }
     }
 });

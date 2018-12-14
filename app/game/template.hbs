@@ -5,6 +5,7 @@
         left
       </div>
       <div class="flex-1 p-4 bg-pink">
+        {{!-- {{color}} --}}
         <ColorPicker @color={{color}} @onChange={{action (mut color)}} />
       </div>
     </div>
@@ -16,7 +17,12 @@
       </div>
       <div class="flex-1 p-4">
         <div class="p-8">
-          <PictureGrid @picture={{game.gamePicture}} />
+          <PictureGrid 
+            @picture={{game.gamePicture}} 
+            @color={{color}}
+            @isEditable={{true}}
+            @onChange={{action 'changeColor'}}
+          />
         </div>
       </div>
     </div>
