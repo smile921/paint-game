@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-const templates = [
+const TEMPLATES = [
     [ "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white" ],
     [ "green", "pink", "pink", "pink", "pink", "pink", "pink", "pink", "pink", "green", "green", "purple", "purple", "purple", "black", "red", "red", "grey", "yellow", "green", "green", "white", "black", "purple", "white", "pink", "white", "yellow", "yellow", "green", "green", "red", "white", "purple", "purple", "black", "yellow", "yellow", "grey", "green", "green", "red", "grey", "black", "yellow", "yellow", "black", "grey", "red", "green", "green", "white", "grey", "yellow", "yellow", "purple", "purple", "grey", "red", "green", "green", "black", "grey", "yellow", "black", "black", "purple", "white", "pink", "green", "green", "green", "yellow", "yellow", "white", "pink", "white", "purple", "purple", "green", "pink", "green", "yellow", "grey", "red", "red", "black", "green", "green", "green", "indigo", "green", "green", "green", "green", "green", "green", "green", "pink", "indigo" ],
     [ "purple", "white", "blue", "white", "red", "white", "pink", "blue", "yellow", "yellow", "purple", "purple", "blue", "red", "red", "pink", "white", "blue", "blue", "yellow", "pink", "pink", "red", "red", "pink", "yellow", "yellow", "blue", "yellow", "yellow", "pink", "white", "red", "blue", "yellow", "yellow", "yellow", "blue", "yellow", "black", "pink", "pink", "red", "pink", "pink", "teal", "teal", "teal", "teal", "white", "yellow", "yellow", "red", "white", "black", "black", "black", "black", "teal", "teal", "yellow", "white", "black", "black", "blue", "blue", "purple", "pink", "pink", "teal", "black", "black", "yellow", "yellow", "blue", "blue", "pink", "pink", "white", "teal", "white", "yellow", "yellow", "blue", "blue", "pink", "pink", "purple", "purple", "white", "yellow", "white", "blue", "blue", "pink", "pink", "blue", "white", "purple", "purple" ],
@@ -19,9 +19,11 @@ export default DS.Model.extend({
     },
     pickRandomTemplate(){
         // debugger
-        let picked = templates[Math.floor(Math.random() * templates.length)];
-        this.templatePicture.load(picked);
+        let rand = Math.floor(Math.random() * TEMPLATES.length);
+        // console.log(rand)
+        let picked = TEMPLATES[rand];
         this.gamePicture.clear();
+        this.templatePicture.load(picked);
     }
 
 });

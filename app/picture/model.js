@@ -11,14 +11,15 @@ export default DS.Model.extend({
     }
   },
   load(template){
-    for(let i=0;i<template.leagth;i++){
+    for(let i=0;i<template.length;i++){
       let cell = this.cells.objectAt(i);
       cell.set('color',template[i]);
     }    
-    debugger
+    // debugger
   },
   clear(){
     this.cells.setEach('color','white');
+    // debugger
   },
   serialized: computed.mapBy('cells','color'),
   asJson: computed('serialized.[]',function(){
