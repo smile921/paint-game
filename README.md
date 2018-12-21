@@ -3,6 +3,12 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## 目标--用 ember 实现 一些网站练手
+* do with ember-paint-game 
+* [https://affinitweet.com/](https://affinitweet.com/)
+* [http://www.pravega.io/](http://www.pravega.io/)
+* 
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
