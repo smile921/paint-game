@@ -9,3 +9,7 @@ table.picture td:after {
     margin-top: 100%;
     display: block;
 }
+
+.particle-js{
+    background-color: #111222;
+}
